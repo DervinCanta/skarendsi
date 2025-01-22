@@ -1,0 +1,558 @@
+/* General Styles */
+body {
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+    background-color: #1B1B1B;
+    color: #eef8ce;
+    font-size: 14px;
+    background-image: 
+        url(img/bg.png),
+        repeating-linear-gradient(to right, transparent 0 500px, #73814B33 500px 501px);
+    background-size: 100%;
+}
+    /* General Contact Form Styles */
+    .container {
+        width: 100%;
+        max-width: 600px;
+        margin: 0 auto;
+        text-align: center;
+        background: rgba(255, 255, 255, 0.05);
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(10px);
+    }
+
+    .container h1 {
+        font-size: 2rem;
+        margin-bottom: 20px;
+        color: #fff;
+    }
+
+    .container form {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .container label {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        color: #fff;
+        font-size: 1rem;
+        font-weight: bold;
+    }
+
+    .container input,
+    .container textarea,
+    .container select,
+    .container button {
+        width: 100%;
+        font-size: 1rem;
+        padding: 12px 15px;
+        border-radius: 5px;
+        border: none;
+        outline: none;
+        background: #2c2c2c;
+        color: white;
+    }
+
+    .container textarea {
+        resize: none;
+    }
+
+    .container button {
+        background: #0078ff;
+        color: white;
+        cursor: pointer;
+        transition: background 0.3s, transform 0.2s;
+    }
+
+    .container button:hover {
+        background: #005bb5;
+        transform: translateY(-2px);
+    }
+
+    .container .back-button {
+        margin-top: 20px;
+        font-size: 0.9rem;
+        text-decoration: none;
+        color: white;
+        opacity: 0.7;
+        transition: opacity 0.3s;
+    }
+
+    .container .back-button:hover {
+        opacity: 1;
+    }
+
+/* Scrollbar */
+*::-webkit-scrollbar {
+    width: 0;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+/* Header */
+header {
+    width: 100%;
+    background: #333;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+    height: 50px; /* Fixed height */
+    display: flex; /* Ensure children are contained */
+    align-items: center; /* Vertically align content */
+}
+
+header .content-fit {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    height: 100%; /* Match header height */
+    overflow: hidden; /* Prevent overflow issues */
+}
+
+header nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 10px; /* Space between menu items */
+}
+
+header nav ul li {
+    position: relative;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 14px;
+    padding: 5px 10px;
+    transition: 0.3s ease;
+    display: inline-block; /* Ensure links stay within navbar */
+}
+
+header nav ul li a:hover {
+    color: #bf2227;
+    background: #fff;
+    border-radius: 4px;
+}
+
+header nav ul li .dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #444;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    overflow: hidden;
+    z-index: 1000;
+    width: max-content;
+}
+
+header nav ul li .dropdown-content a {
+    color: #fff;
+    padding: 5px 10px; /* Smaller padding */
+    text-decoration: none;
+    display: block;
+    transition: background-color 0.3s;
+}
+
+header nav ul li .dropdown-content a:hover {
+    background-color: #bf2227;
+    color: #fff;
+}
+
+header nav ul li:hover .dropdown-content {
+    display: block;
+}
+
+/* Style the Add to Cart button */
+.btn {
+    padding: 10px 20px;
+    background-color: #28a745; /* Green color */
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #218838; /* Darker green on hover */
+}
+
+
+
+
+
+
+
+.card-container {
+  min-height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px; /* Increased spacing between cards */
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background: #1B1B1B;
+  overflow: visible; /* Ensure icons can overflow */
+  position: relative; /* Needed for proper stacking */
+}
+
+.card {
+  width: 350px;
+  height: 300px;
+  background: #fff;
+  box-shadow: 0 5px 10px #bbb;
+  text-align: center;
+  position: relative;
+  z-index: 2; /* Ensure the card is above other content */
+  margin: 10px;
+  overflow: visible; /* Allow child elements to overflow */
+}
+
+.card:hover {
+  height: 550px;
+  transition: height 0.5s ease;
+}
+
+/* Image Styling */
+/* Image Styling */
+.card .image {
+  position: relative;
+  width: 100%;
+  height: 70%; /* Adjust height as needed to fit within the card */
+  overflow: hidden; /* Hide overflow to ensure image stays within bounds */
+}
+
+.card .image img {
+  width: 100%; /* Make the image take full width of its container */
+  height: auto; /* Allow height to adjust automatically to preserve aspect ratio */
+  max-height: 100%; /* Prevent the image from growing taller than its container */
+  object-fit: contain; /* Ensure the image scales to fit without distortion */
+  filter: drop-shadow(5px 5px 5px #333);
+  transition: transform 0.5s ease;
+}
+
+.card:hover .image img {
+  transform: scale(1.1) rotate(45deg);
+}
+#product-image {
+    transition: opacity 0.5s ease-in-out;
+}
+
+
+/* Card Hover Effect */
+.card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: #444;
+  z-index: -1;
+  clip-path: circle(50% at 70% 18%);
+  -webkit-clip-path: circle(50% at 70% 18%);
+  transition: clip-path 0.5s ease, -webkit-clip-path 0.5s ease;
+}
+
+.card:hover::before {
+  clip-path: circle(47.9% at 85% 0);
+  -webkit-clip-path: circle(47.9% at 85% 0);
+}
+
+/* Content Styling */
+.card .content {
+  transform: translateY(100px);
+  opacity: 0;
+  transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+.card:hover .content {
+  transform: translateY(0px);
+  opacity: 1;
+}
+
+.card .content .title {
+  font-size: 30px;
+  color: #666;
+}
+
+.card .content .details {
+  margin: 15px 0;
+  padding: 0;
+  list-style: none;
+  text-align: left;
+}
+
+.card .content .details li {
+  font-size: 16px;
+  color: #666;
+  margin: 5px 0;
+}
+
+.card .content .details li strong {
+  color: #333;
+}
+
+.card .content .price {
+  color: #333;
+  padding: 16px 0;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.card .content .price span {
+  font-size: 17px;
+  font-weight: normal;
+  text-decoration: line-through;
+}
+
+.card .content .btn {
+  height: 45px;
+  width: 170px;
+  margin: 10px 0;
+  border: none;
+  outline: none;
+  color: #fff;
+  background: #bf2227;
+  font-size: 17px;
+  cursor: pointer;
+  border-radius: 5px; /* Slightly rounded button */
+}
+
+.card .content .btn:hover {
+  opacity: 0.9;
+  letter-spacing: 2px;
+  width: 180px;
+}
+
+/* Icons Styling */
+.card .icons {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  flex-flow: column;
+  padding: 17px 5px;
+  background: #fff;
+  clip-path: polygon(25% 0%, 100% 0, 100% 50%, 100% 100%, 25% 100%, 0% 50%);
+  border-right: 2px solid #3333;
+  opacity: 0;
+  z-index: 3; /* Ensure icons are above other content */
+  transition: opacity 0.5s ease, left 0.5s ease;
+}
+
+.card .icons a {
+  margin: 20px 13px;
+  padding-left: 15px;
+  font-size: 23px;
+  color: #999;
+  text-decoration: none;
+}
+
+.card .icons a:hover {
+  color: #333;
+}
+
+.card:hover .icons {
+  left: -76px;
+  opacity: 1;
+  z-index: 4; /* Ensure visibility on hover */
+}
+
+/* Colors Styling */
+.card .colors {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  flex-flow: column;
+  background: #fff;
+  padding: 5px;
+  padding-right: 17px;
+  clip-path: polygon(0 0, 75% 0%, 100% 50%, 75% 100%, 0 100%, 0% 50%);
+  border-left: 2px solid #3333;
+  opacity: 0;
+  z-index: 3; /* Ensure colors are above other content */
+  transition: opacity 0.5s ease, right 0.5s ease;
+}
+
+.card:hover .colors {
+  right: -79px;
+  opacity: 1;
+  z-index: 4; /* Ensure visibility on hover */
+}
+
+.card .colors span {
+  display: block;
+  height: 25px;
+  width: 25px;
+  border-radius: 50px;
+  margin: 8px 15px;
+  cursor: pointer;
+  box-shadow: 0 3px 5px #999;
+}
+
+.card .colors span.active {
+  box-shadow: 0 0 0 6px #3333;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Sections */
+.section {
+    width: 100%;
+    min-height: 100vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content-fit {
+    width: min(1200px, 90vw);
+    margin: auto;
+    padding-block: 10em;
+    text-align: center;
+    z-index: 1;
+}
+
+#banner {
+    position: relative;
+    text-align: center;
+}
+
+#banner .title {
+    color: #d1ff48;
+    font-size: 11em;
+    font-family: "devil breeze";
+    font-weight: bold;
+}
+
+#banner .title::before {
+    content: attr(data-before);
+    position: absolute;
+    top: 0.5em;
+    inset: 0.66em 0 0 0;
+    z-index: -1;
+    color: #445022;
+}
+
+#banner .decorate {
+    position: absolute;
+    width: 50vw;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+}
+
+#intro {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 2em;
+}
+
+#intro .number,
+#description .number {
+    font-family: "devil breeze";
+    font-size: 5em;
+    font-weight: bold;
+    margin-bottom: 1em;
+}
+
+#description {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 2em;
+    border-radius: 10px;
+}
+
+#contact {
+    text-align: center;
+    padding: 2em;
+}
+
+#contact table {
+    width: min(800px, 90vw);
+    margin: 2em auto;
+    font-size: 1.2em;
+    color: #eef8ce;
+    border-collapse: collapse;
+}
+
+#contact table td {
+    padding: 0.5em;
+    border-bottom: 1px solid #445022;
+}
+
+#contact table td:first-child {
+    text-align: left;
+    font-weight: bold;
+}
+
+#contact table td:last-child {
+    text-align: right;
+    font-weight: normal;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 1023px) {
+    #banner .title {
+        font-size: 5em;
+    }
+
+    #intro .content-fit {
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    #banner .title {
+        font-size: 3em;
+    }
+
+    .section .number {
+        font-size: 3em;
+    }
+
+    #contact table {
+        font-size: 1em;
+    }
+}
